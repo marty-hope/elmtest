@@ -7,12 +7,16 @@ fib n =
     1 -> 1
     _ -> fib (n - 1) + fib (n - 2)
 
-getEven : List number -> List number
+isEven : Int -> Bool
+isEven n =
+    n % 2 == 0
+
+getEven : List Int -> List Int
 getEven numbers =
-    match numbers with
-         hd :: tl -> hd % 2 == 0 ? hd : getEven tl
-         [] -> Nothing 
+    List.filter isEven numbers
+
+
 
 main : Html.Html a
-main = 
+main =
     text (toString (fib 34))
