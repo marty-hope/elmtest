@@ -26,8 +26,6 @@ getOdd numbers =
 list: List number
 list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-fibIndex: Int
-fibIndex = 30
 
 main : Html.Html a
 main =
@@ -47,7 +45,7 @@ main =
 
     ,p [] [ text ("Determine fibonnaci value at index"
     ++ " "
-    ++ (toString fibIndex)
+    ++ (toString 30)
     ++ " => "
-    ++ (toString (fib fibIndex)))]
+    ++ (toString (fib 30)))]
     ]
